@@ -1,0 +1,12 @@
+used mysql workbench
+
+create database db;
+use db;
+create table book(isbn bigint(13) auto_increment primary key ,title varchar(30), price double(6,2) );
+create table author1(id int(5) auto_increment primary key, name varchar(10));
+create table bookauthor(bisbn bigint(13) references book(isbn), aid int(5) references author1(id), primary key(bisbn,aid));
+alter table author1 auto_increment=00001;
+
+alter table book auto_increment=9791234567890;
+create table author(authorid int(6), firstname varchar(10), middlename varchar(10), lastname varchar(10),phonenumber numeric(10));
+create table db1(id int(2),data varchar(20));
